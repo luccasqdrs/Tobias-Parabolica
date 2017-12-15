@@ -42,7 +42,7 @@ public class Proibido : MonoBehaviour {
 
 	IEnumerator Fim(){
 		yield return new WaitForSeconds(2);
-			Application.LoadLevel ("Cena1");		
+			Application.LoadLevel ("Cena0");		
 	}
 
 }

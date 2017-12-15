@@ -55,7 +55,7 @@ public class Signal : MonoBehaviour {
 
 	void OnCollisionEnter( Collision c){
 		if(c.gameObject.tag=="Truck")
-			Application.LoadLevel ("Cena1");
+			Application.LoadLevel ("Cena0");
 	}
 
 	IEnumerator Espera(){

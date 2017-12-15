@@ -24,7 +24,7 @@ public class Narration : MonoBehaviour {
 
 	IEnumerator Fim(){
 		yield return new WaitForSeconds(5);
-		Application.LoadLevel ("Cena1");
+		Application.LoadLevel ("Cena2");
 
 	}
 }
