@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Signal
   - Truck
+  - Proibido
+  - Carro2
+  - Farol1
+  - NarProi
+  - Passou1
+  - Passou2
+  - Jeremias
+  - Container
   layers:
   - Default
   - TransparentFX

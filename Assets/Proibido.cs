@@ -8,6 +8,7 @@ public class Proibido : MonoBehaviour {
 	public Camera camJogo;
 	public Camera camCena;
 	public Renderer contrend;
+
 	
 
 	// Use this for initialization
@@ -30,7 +31,18 @@ public class Proibido : MonoBehaviour {
 			camera.enabled=true;
 			camJogo.enabled=false;
 			camCena.enabled=true;
+			GetComponent<Rigidbody>().isKinematic=false;
 		}
+	}
+
+	void OnCollisionEnter( Collision c){
+		if(c.gameObject.tag=="Container")
+			StartCoroutine(Fim());
+	}
+
+	IEnumerator Fim(){
+		yield return new WaitForSeconds(2);
+			Application.LoadLevel ("Cena1");		
 	}
 
 }

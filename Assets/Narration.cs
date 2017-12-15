@@ -16,12 +16,15 @@ public class Narration : MonoBehaviour {
 			FindObjectOfType<AudioManager>().Play("Passou1");	
 		if(other.tag=="Passou2")
 			FindObjectOfType<AudioManager>().Play("Passou2");	
-		if(other.tag=="Jeremias")
-			FindObjectOfType<AudioManager>().Play("Jeremias");		
+		if(other.tag=="Jeremias"){
+			FindObjectOfType<AudioManager>().Play("Jeremias");
+			StartCoroutine(Fim());
+		}		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	IEnumerator Fim(){
+		yield return new WaitForSeconds(5);
+		Application.LoadLevel ("Cena1");
+
 	}
 }
